@@ -175,14 +175,20 @@ if ( typeof define === 'function' && define.amd ) {
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
 
 
 
 
+$(window).scroll(function() {
+var st = $(this).scrollTop();
+console.log(st);
+$(".header_fon_content").css({
+	"transform" : "translate(0%, -" + st/3 +"%"
 
-
+});
+});
 
 
 
@@ -192,3 +198,8 @@ $(document).ready(function () {
 
 
 });
+
+
+
+
+
